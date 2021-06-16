@@ -1,5 +1,5 @@
 #!/bin/bash
-source function.sh
+source shell.fucntions
 # This file is a part of https://www.github.com/davinash97/funcshell
 # Feel Free to use this file.
 # Just make sure to tag this Repo, And Credits.
