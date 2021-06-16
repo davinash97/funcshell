@@ -95,3 +95,8 @@
             And <a href="https://www.github.com/neel0210">Neel</a>, Who Encouraged me to make this one for Beginners
         </li>
 </div>
+<div align="right">
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fdavinash97%2Fshell&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitor+Number&edge_flat=false"/>
+<!--Looks Like Your Liked the Visitor Badge.
+Here is the Credits: https://hits.seeyoufarm.com/-->
+</div>
