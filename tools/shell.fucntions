@@ -1,12 +1,19 @@
 #!/bin/bash
 # This file is a part of https://www.github.com/davinash97/funcshell
 # Use it with Proper Credits, And Make sure to tag the repo.
-print "\n\tShell Scripting made easy for you by DAvinash97@github\n" "invert"
+echo -e "\n\tShell Scripting made easy for you by DAvinash97@github\n"
+clear
 # This file is a part of https://www.github.com/davinash97/funcshell
+
+
+help() 
+{
+    echo -e "\n\t\033[0;31m${1}\033[0m\n"
+}
 
 print() {
     if [[ ! ${1} ]]; then
-        echo -e "\n\t\033[0;31mYou need to provide some argument\033[0m\n"
+        help 'Try print "This is echo" "green_bg".'
     else
         CLR="${2}"
         case $CLR in
@@ -71,6 +78,7 @@ print() {
 print_logo() {
     if [ ! ${1} ]; then
         print "You need to provide some argument..." "red"
+        help 'Try: print_logo "banner.txt" "invert"'
     else
         if [ -f ${1} ]; then
             banner=$(cat ${1})
@@ -84,6 +92,7 @@ print_logo() {
 delete() {
     if [ ! ${1} ]; then
         print "Delete What?" "red"
+        help 'To delete "abcd.txt" try: delete "abcd.txt"'
     else
         if [ -d "${1}" ]; then
             print "Deleting dir ${1}"
@@ -102,6 +111,7 @@ delete() {
 permission() {
     if [ ! ${1} ]; then
         print "Change Permission for?" "red"
+        help 'To change permissions for "abcd.txt" try: permission "abcd.txt" "+x"'
     else
         if [ -f ${1} ] || [ -d ${1} ]; then
             print "Changing permissions for $2"
@@ -115,6 +125,7 @@ permission() {
 get_access() {
     if [ ! ${1} ]; then
         print "Get Access? Where?" "red"
+        help 'To get access for "abcd.txt" try: get_access "abcd.txt" "777"'
     else
         if [ -f ${1} ] || [ -d ${1} ]; then
             sudo chown $USER:$USER $1
@@ -127,6 +138,7 @@ get_access() {
 create_dir() {
     if [ ! ${1} ]; then
         print "Can't Create Folder named Blank." "red"
+        help 'To create folder named "abcd" try: create_dir "abcd"'
     else
         if [ -d ${1} ]; then
             print "Folder ${1} already exist" "red"
@@ -140,6 +152,7 @@ create_dir() {
 create_file() {
     if [ ! ${1} ]; then
         print "Can't Create File named Blank" "red"
+        help 'To create a blank file named "abcd.txt" try: create_file "banner.txt"'
     else
         if [ ! ${2} ]; then
             if [ -f ${1} ]; then
@@ -172,6 +185,7 @@ create_file() {
 write() {
     if [ ! ${1} ]; then
         print "Write what? Provide Something" "red"
+        help 'To write "test" in a file named "abcd.txt" try: write "abcd.txt" "test"'
     else
         if [ ! ${2} ]; then
             print "Write Where? Add Filename..." "red"
