@@ -185,7 +185,7 @@ create_file() {
 write() {
     if [ ! ${1} ]; then
         print "Write what? Provide Something" "red"
-        help 'To write "test" in a file named "abcd.txt" try: write "abcd.txt" "test"'
+        help 'To write "test" in a file named "abcd.txt" try: write "test" "abcd.txt"'
     else
         if [ ! ${2} ]; then
             print "Write Where? Add Filename..." "red"
